@@ -54,6 +54,7 @@ class VagaResource extends Resource
                             ->numeric()
                             ->minValue(1)
                             ->default(1)
+                            // BUG here... if you comment this line the RichEditor works fine
                             ->mask(fn (TextInput\Mask $mask) => $mask->integer())
                             ->label('Qtd. Posições'),
 
